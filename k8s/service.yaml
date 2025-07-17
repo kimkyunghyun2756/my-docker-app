@@ -10,5 +10,4 @@ spec:
     - protocol: TCP
       port: 80          # 클러스터 내부 서비스 포트
       targetPort: 80    # 컨테이너 포트
-      nodePort: 31495   # 외부 노출 포트 (선택 안 하면 자동 할당됨)
 
