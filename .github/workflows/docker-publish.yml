@@ -38,6 +38,9 @@ jobs:
         run: |
           mkdir -p $HOME/.kube
           echo "${{ secrets.KUBECONFIG }}" | base64 -d > $HOME/.kube/config
+      
+      - name: Check secret length
+        run: echo "${{ secrets.KUBECONFIG }}" | wc -c
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
